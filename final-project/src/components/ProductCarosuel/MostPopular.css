@@ -17,12 +17,10 @@
     border-radius: 2px;
     padding: 10px;
     margin: 10px;
- 
     height: 550px;
-    width: 325px;
+    width: 300px;
     flex-direction: column;
     display: inline-block;
-    /* align-items: center; */
 }
 
 .white {
@@ -52,8 +50,6 @@
     width: 220px;
     height: 220px;
     object-fit: cover;
-    /* mix-blend-mode: multiply; */
-    
 }
 
 
