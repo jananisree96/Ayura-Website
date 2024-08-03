@@ -6,7 +6,12 @@
   position: relative;
   font-family: Arial, sans-serif;
 }
-
+.typeWriterbox {
+  width: auto;
+  height: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
 .video-container {
   width: 70%;
   height: 100vh;

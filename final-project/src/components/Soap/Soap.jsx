@@ -18,9 +18,11 @@ const Soap = () => {
           Your browser does not support the video tag.
         </video>
         <div className="overlay">
-          <p className="text-a">
-            <TypewriterEffect  texts={texts}/>
-          </p>
+          <div className="typeWriterbox">
+            <p className="text-a">
+              <TypewriterEffect texts={texts} />
+            </p>
+          </div>
           <p className="text-b">
             JUST LIKE NATURE
             <br /> INTENDED
