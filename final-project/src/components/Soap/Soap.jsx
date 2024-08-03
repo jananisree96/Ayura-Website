@@ -1,8 +1,16 @@
 import React from "react";
 import ButtonAnimation from "../Button/Buttons";
 import "./Soap.css";
+import TypewriterEffect from "../TypewriterEffect";
+import { text } from "@fortawesome/fontawesome-svg-core";
  
 const Soap = () => {
+
+    const texts = [
+      "HANDCRAFTED ORGANIC PRODUCTS",
+      "NATURALLY SOURCED INGREDIENTS",
+      "ECO-FRIENDLY PACKAGING",
+    ];
   return (
     <div className="container">
       <div className="video-container">
@@ -11,7 +19,9 @@ const Soap = () => {
           Your browser does not support the video tag.
         </video>
         <div className="overlay">
-          <p className="text-a">HANDCRAFTED ORGANIC SOAPS</p>
+          <p className="text-a">
+            <TypewriterEffect  texts={texts}/>
+          </p>
           <p className="text-b">
             JUST LIKE NATURE
             <br /> INTENDED
