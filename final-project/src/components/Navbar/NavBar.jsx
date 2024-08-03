@@ -13,31 +13,52 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="nav-bar">
-      <div className="nav-section">
-        <a href="#" className="nav-item">PRODUCTS</a>
-        <a href="#" className="nav-item">BLOG</a>
-        <a href="#" className="nav-item">SALE</a>
-        <a href="#" className="nav-item">CONTACT</a>
-      </div>
-      <div className="nav-brand">
-        <a href="#" className="logo">AyurCraft</a>
-      </div>
-      <div className="nav-section">
-        <div>
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={trending}
-            sx={{ width: 250 }}  
-            renderInput={(params) => <TextField {...params} label="Search..." />}
-          />
+    <>
+      <div className='shipping'>FREE SHIPPING ON ORDERS OVER $50</div>
+      <nav className="nav-bar">
+        <div className="nav-section">
+          <a href="#" className="nav-item">
+            PRODUCTS
+          </a>
+          <a href="#" className="nav-item">
+            BLOG
+          </a>
+          <a href="#" className="nav-item">
+            SALE
+          </a>
+          <a href="#" className="nav-item">
+            CONTACT
+          </a>
         </div>
-        <a href="#" className="nav-item"><FontAwesomeIcon icon={faUser} /> Log In</a>
-        <a href="#" className="nav-item"><FontAwesomeIcon icon={faGift} /></a>
-        <a href="#" className="nav-item"><FontAwesomeIcon icon={faShoppingBag} /></a>
-      </div>
-    </nav>
+        <div className="nav-brand">
+          <a href="#" className="logo">
+            AyurCraft
+          </a>
+        </div>
+        <div className="nav-section">
+          <div>
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={trending}
+              sx={{ width: 250 }}
+              renderInput={(params) => (
+                <TextField {...params} label="Search..." />
+              )}
+            />
+          </div>
+          <a href="#" className="nav-item">
+            <FontAwesomeIcon icon={faUser} /> Log In
+          </a>
+          <a href="#" className="nav-item">
+            <FontAwesomeIcon icon={faGift} />
+          </a>
+          <a href="#" className="nav-item">
+            <FontAwesomeIcon icon={faShoppingBag} />
+          </a>
+        </div>
+      </nav>
+    </>
   );
 };
 

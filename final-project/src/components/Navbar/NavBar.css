@@ -1,15 +1,29 @@
+.shipping {
+  width: 100%;
+  background-color: #828282;
+  padding: 10px;
+  color: rgb(249, 249, 249);
+  letter-spacing: 4px;
+  text-align: center;
+  font-size: 13px;
+}
+
 .nav-bar {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 50px 35px;
     background-color: white;
   }
   
   .nav-section {
     display: flex;
     align-items: center;
+  }
+
+  .nav-section a {
+    font-size: 13px;
   }
   
   .nav-brand {
@@ -24,7 +38,7 @@
     color: black;
     padding: 10px;
   }
-  
+
   .logo {
     font-size: 25px;
     font-weight: bold;
