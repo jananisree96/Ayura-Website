@@ -1,7 +1,14 @@
-import './App.css'
-import NavBar from './components/NavBar'
-
+import React from "react";
+import NavBar from "./components/NavBar";
+import Shop from "./components/Soap/Soap"
+ 
 function App() {
-  <NavBar/>
+  return (
+    <>
+      <NavBar />
+      <Shop/>
+    </>
+  );
 }
-export default App
+ 
+export default App;

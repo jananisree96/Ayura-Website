@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonAnimation from "../Button/Buttons";
-import "./Soap.css"; 
-
+import "./Soap.css";
+ 
 const Soap = () => {
   return (
     <div className="container">
       <div className="video-container">
-        <video autoPlay loop className="video">
+        <video autoPlay loop muted className="video">
           <source src="soap.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -24,5 +24,6 @@ const Soap = () => {
     </div>
   );
 };
-
+ 
 export default Soap;
+ 
