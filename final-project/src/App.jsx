@@ -1,14 +1,16 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import Shop from "./components/Soap/Soap"
+import Soap from "./components/Soap/Soap"
 import Candles from "./components/FAVORITES/TopProducts";
+import NavBar from "./components/Navbar/NavBar";
+import MostPopular from "./components/ProductCarosuel/MostPopular";
  
 function App() {
   return (
     <>
-      <NavBar />
-      <Shop/>
+      <NavBar/>
+      <Soap/>
       <Candles/>
+      <MostPopular/>
     </>
   );
 }

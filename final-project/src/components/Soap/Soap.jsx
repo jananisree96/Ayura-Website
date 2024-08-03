@@ -2,7 +2,6 @@ import React from "react";
 import ButtonAnimation from "../Button/Buttons";
 import "./Soap.css";
 import TypewriterEffect from "../TypewriterEffect";
-import { text } from "@fortawesome/fontawesome-svg-core";
  
 const Soap = () => {
 
