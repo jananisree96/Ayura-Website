@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faGift, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css'; 
@@ -32,7 +31,7 @@ const NavBar = () => {
         </div>
         <div className="nav-brand">
           <a href="#" className="logo">
-            AyurCraft
+            Ayura
           </a>
         </div>
         <div className="nav-section">
@@ -47,14 +46,14 @@ const NavBar = () => {
               )}
             />
           </div>
-          <a href="#" className="nav-item">
-            <FontAwesomeIcon icon={faUser} /> Log In
+          <a href="#" className="nav-item" id='icon-large'>
+            <UserOutlined style={{ fontSize:'24px' }}/> Log In
           </a>
           <a href="#" className="nav-item">
-            <FontAwesomeIcon icon={faGift} />
+            <GiftOutlined style={{ fontSize: '24px' }}/>
           </a>
           <a href="#" className="nav-item">
-            <FontAwesomeIcon icon={faShoppingBag} />
+            <ShoppingCartOutlined style={{ fontSize: '24px' }}/>
           </a>
         </div>
       </nav>

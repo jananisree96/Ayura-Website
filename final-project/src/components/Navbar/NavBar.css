@@ -1,6 +1,11 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
 .shipping {
   width: 100%;
-  background-color: #828282;
+  background-color: rgb(95 95 75);
   padding: 10px;
   color: rgb(249, 249, 249);
   letter-spacing: 4px;
@@ -13,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 35px;
+    padding: 70px 35px;
     background-color: white;
   }
   
@@ -23,7 +28,7 @@
   }
 
   .nav-section a {
-    font-size: 13px;
+    font-size: 14px;
   }
   
   .nav-brand {
@@ -47,5 +52,9 @@
     padding: 10px;
     border: 3px solid black;
     letter-spacing: 3px;
+  }
+
+  #icon-large {
+    font-size: 16px;
   }
   
