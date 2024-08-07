@@ -3,7 +3,7 @@ import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/ic
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css'; 
-
+  
 const NavBar = () => {
   const trending = [
     { label: 'Honey Soap' },
@@ -13,7 +13,10 @@ const NavBar = () => {
 
   return (
     <>
-      <div className='shipping'>FREE SHIPPING ON ORDERS OVER $50</div>
+      <div className="shipping">
+        <img src="./aro.png" alt="..." />
+        <p>FREE SHIPPING ON ORDERS OVER $50</p>
+      </div>
       <nav className="nav-bar">
         <div className="nav-section">
           <a href="#" className="nav-item">
@@ -31,7 +34,7 @@ const NavBar = () => {
         </div>
         <div className="nav-brand">
           <a href="#" className="logo">
-            Ayura
+            AYURA
           </a>
         </div>
         <div className="nav-section">
@@ -46,14 +49,14 @@ const NavBar = () => {
               )}
             />
           </div>
-          <a href="#" className="nav-item" id='icon-large'>
-            <UserOutlined style={{ fontSize:'24px' }}/> Log In
+          <a href="#" className="nav-item" id="icon-large">
+            <UserOutlined style={{ fontSize: "24px" }} /> Log In
           </a>
           <a href="#" className="nav-item">
-            <GiftOutlined style={{ fontSize: '24px' }}/>
+            <GiftOutlined style={{ fontSize: "24px" }} />
           </a>
           <a href="#" className="nav-item">
-            <ShoppingCartOutlined style={{ fontSize: '24px' }}/>
+            <ShoppingCartOutlined style={{ fontSize: "24px" }} />
           </a>
         </div>
       </nav>
