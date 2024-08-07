@@ -3,6 +3,7 @@ import Soap from "./components/Soap/Soap"
 import Candles from "./components/FAVORITES/TopProducts";
 import NavBar from "./components/Navbar/NavBar";
 import MostPopular from "./components/ProductCarosuel/MostPopular";
+import Footer from "./components/Footer/Footer";
  
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Soap/>
       <Candles/>
       <MostPopular/>
+      <Footer/>
     </>
   );
 }

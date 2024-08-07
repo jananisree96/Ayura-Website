@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.left .social-media a
+{
+    padding-left: 15px;
+    font-size: 28px;
+    color: #ff4646;
+}
+
+.left h1
+{
+    margin: 15px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #101010;
+} 
+
+.container
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+.container .left .social-media i{
+    padding-right: 15px;
+}
+
+.left p{
+    margin-left: 18px;
+    font-size: 18px;
+}
+
+.download p{
+    font-size: 13px;
+}
+
+.download button
+{
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: white;
+    border-color: darkgray;
+    margin-top: 15px;
+    display: flex;
+    padding: 15px 20px;
+}
+
+.download button p
+{
+    padding-left: 10px;
+}
+
+.download a{
+    text-decoration: none;
+}
+
+.nav-1 ul
+{
+    list-style-type: none;
+}
+
+.nav-1 ul li
+{
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.nav-2 ul
+{
+    list-style-type: none;
+}
+
+.nav-2 ul li
+{
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.nav-1 , .nav-2 ul li:hover{
+    cursor: pointer;
+}
+
+.nav-1 ,.nav-2 , ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-1 , .nav-2 ul li a{
+    font-size: 13px;
+}
+
+.left p
+{
+    margin-top: 15px;
+    font-weight: 400; 
+}
+
+.download button:hover{
+    cursor: pointer;
+}
+
+/* @media screen and (max-width: 650px){
+
+    .container
+    {
+        width: 375px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: 0.6s ease-in-out;
+        align-items: center;
+    }
+    
+    .nav-1,.nav-2
+    {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+
+    .container
+    {
+        width: 1400px;
+        margin: 0 auto;
+    }
+} */
