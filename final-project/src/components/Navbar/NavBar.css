@@ -61,6 +61,12 @@ body {
   font-size: 14px;
 }
 
+.nav-section a:hover{
+  transition: 0.8s ;
+  color: rgba(200, 0, 150, 0.821);
+  border: 1px dotted rgba(10, 10, 10, 0.77);
+}
+
 .nav-brand {
   flex: 1;
   display: flex;
