@@ -19,19 +19,18 @@ function Footer() {
                             <a href="#" >
                                 <InstagramOutlined  />
                             </a>
-                            <a href="#" >
-                                <TwitterOutlined/>
-                            </a>
                             <a href="#">
                                 <FacebookOutlined/>
+                            </a>
+                            <a href="#" >
+                                <TwitterOutlined/>
                             </a>
                             <a href="#" >
                                 <LinkedinOutlined/>
                             </a>
                         </div>
-                        <p style={{ color: 'darkgray' }}>&copy;2024 Ayura Products Limited</p>
+                        <p>&copy;2024 Ayura Products Limited</p>
                     </div>
-
                     <div className="nav-1">
                         <ul>
                             <li><a href="#">Home</a></li>

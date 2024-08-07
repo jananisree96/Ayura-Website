@@ -3,6 +3,7 @@ import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/ic
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css'; 
+import { red } from '@mui/material/colors';
   
 const NavBar = () => {
   const trending = [
@@ -41,7 +42,6 @@ const NavBar = () => {
           <div>
             <Autocomplete
               disablePortal
-              
               id="combo-box-demo"
               options={trending}
               sx={{ width: 250 }}
