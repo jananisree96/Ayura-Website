@@ -56,6 +56,7 @@ function MostPopular() {
   return (
     <div className="Product-list">
       <p className="headerp">MOST POPULAR</p>
+      <div className="body1">
       <Slider {...settings}>
         {validProducts.map((product) => (
           <div key={product.id} className="card">
@@ -71,6 +72,7 @@ function MostPopular() {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 }

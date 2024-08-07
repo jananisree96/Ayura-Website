@@ -41,6 +41,7 @@ const NavBar = () => {
           <div>
             <Autocomplete
               disablePortal
+              
               id="combo-box-demo"
               options={trending}
               sx={{ width: 250 }}
