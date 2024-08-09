@@ -7,6 +7,7 @@ import MostPopular from "./components/ProductCarosuel/MostPopular";
 
 import Footer from "./components/Footer/Footer";
 import "./index.css"
+
  
 function App() {
    const [cartOpen, setCartOpen] = useState(false);
