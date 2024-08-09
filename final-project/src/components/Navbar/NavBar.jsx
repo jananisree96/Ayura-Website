@@ -4,11 +4,11 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css'; 
   
-const NavBar = () => {
+const NavBar = ({ toggleCart }) => {
   const trending = [
-    { label: 'Honey Soap' },
-    { label: 'Hair Oil' },
-    { label: 'Candles' }
+    { label: "Honey Soap" },
+    { label: "Hair Oil" },
+    { label: "Candles" },
   ];
 
   return (
@@ -41,7 +41,6 @@ const NavBar = () => {
           <div>
             <Autocomplete
               disablePortal
-              
               id="combo-box-demo"
               options={trending}
               sx={{ width: 250 }}
@@ -56,7 +55,7 @@ const NavBar = () => {
           <a href="#" className="nav-item">
             <GiftOutlined style={{ fontSize: "24px" }} />
           </a>
-          <a href="#" className="nav-item">
+          <a href="#" className="nav-item" onClick={toggleCart}>
             <ShoppingCartOutlined style={{ fontSize: "24px" }} />
           </a>
         </div>
