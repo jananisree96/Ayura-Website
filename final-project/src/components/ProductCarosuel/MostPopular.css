@@ -1,6 +1,6 @@
 .Product-list {
     padding: 20px;
-        height: 100vh;
+    height: 100vh;
     background-color: #d7d7cb;
 }
 
@@ -89,5 +89,4 @@
     width: 90%;
     margin: 0 auto;
     height: 400px;
-
 }
