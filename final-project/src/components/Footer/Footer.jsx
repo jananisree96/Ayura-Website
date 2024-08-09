@@ -10,7 +10,7 @@ function Footer() {
     return (
         <>
             <div className="footer">
-                <div className="container">
+                <div className="foot-container">
                     <div className="left">
                         <h1 href="#" className="heading">
                             AYURA

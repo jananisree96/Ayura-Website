@@ -7,7 +7,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.container
+.foot-container
 {
     display: flex;
     justify-content: space-around;
@@ -18,14 +18,14 @@ body{
 {
     padding-left: 15px;
     font-size: 28px;
-    color: #ff4646;
+    color: #1f0000;
 }
 
 .left .social-media a:hover
 {
     padding-left: 15px;
     font-size: 28px;
-    color: #301834;
+    color: #f853fbbd;
     transition: 0.9s ;
 }
 
@@ -46,7 +46,7 @@ body{
 .left p{
     margin-left: 18px;
     font-size: 18px;
-    color: darkcyan;
+    color: rgb(0, 0, 0);
     margin-top: 15px;
     font-weight: 400; 
     letter-spacing: 1px;
