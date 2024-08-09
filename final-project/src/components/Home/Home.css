@@ -3,6 +3,7 @@
   display: flex;
   justify-content: flex-end;
   height: 100vh;
+
   position: relative;
   font-family: Arial, sans-serif;
 }
@@ -14,7 +15,11 @@
 }
 .video-container {
   width: 70%;
-  height: 100vh;
+  height: 90vh;
+  display: flex;
+  position: absolute;
+  right: 0;
+
 }
 
 .video {
@@ -26,7 +31,7 @@
 .overlay {
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: 10%;
   transform: translate(-50%, -50%);
   color: black;
   text-align: start;
@@ -40,9 +45,9 @@
 .text-b {
   font-size: 70px;
   font-weight: normal;
-  margin-top: -0px;
+
 }
 
 .button-container {
-  margin-top: -20px;
+  margin-top: 30px;
 }

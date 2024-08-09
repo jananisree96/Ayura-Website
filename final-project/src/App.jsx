@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import Soap from "./components/Soap/Soap"
+import Home from "./components/Home/Home"
 import Candles from "./components/FAVORITES/TopProducts";
 import NavBar from "./components/Navbar/NavBar";
 import MostPopular from "./components/ProductCarosuel/MostPopular";
+
+import Footer from "./components/Footer/Footer";
+import "./index.css"
  
 function App() {
    const [cartOpen, setCartOpen] = useState(false);
@@ -14,9 +17,10 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Soap/>
+      <Home/>
       <Candles/>
       <MostPopular/>
+      <Footer/>
     </>
   );
 }

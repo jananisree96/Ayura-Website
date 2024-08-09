@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonAnimation from "../Button/Buttons";
-import "./Soap.css";
+import "./Home.css";
 import TypewriterEffect from "../TypewriterEffect";
  
 const Soap = () => {
