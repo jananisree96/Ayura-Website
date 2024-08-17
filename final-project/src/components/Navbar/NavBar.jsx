@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import { Modal, Input, Button, message } from 'antd';
+import { Modal, Input, Button, message,Card } from 'antd';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css';
+
 
 const NavBar = ({ toggleCart }) => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -84,7 +85,12 @@ const NavBar = ({ toggleCart }) => {
               )}
             />
           </div>
-          <a href="#" className="nav-item" id="icon-large" onClick={handleLoginClick}>
+          <a
+            href="#"
+            className="nav-item"
+            id="icon-large"
+            onClick={handleLoginClick}
+          >
             <UserOutlined style={{ fontSize: "24px" }} /> Log In
           </a>
           <a href="#" className="nav-item">
@@ -95,8 +101,8 @@ const NavBar = ({ toggleCart }) => {
           </a>
         </div>
       </nav>
-
-      <Modal 
+     
+      <Modal
         title="Log In"
         open={isLoginModalOpen}
         onCancel={closeLoginModal}
@@ -104,21 +110,34 @@ const NavBar = ({ toggleCart }) => {
         centered
       >
         <div className="login-form">
-          <Input 
-            placeholder="Email: ayur@gmail.com" 
+          <Input
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginBottom: '10px' }} 
+            style={{ marginBottom: "10px" }}
           />
-          <Input.Password 
-            placeholder="Password: 123" 
+          <Input.Password
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ marginBottom: '20px' }} 
+            style={{ marginBottom: "20px" }}
           />
           <Button type="primary" block onClick={handleLogin}>
             Login
           </Button>
+        </div>
+
+        <Card style={{ marginTop: "20px", textAlign: "center" }}>
+          <p>
+            <strong>Email:</strong> ayur@gmail.com
+          </p>
+          <p>
+            <strong>Password:</strong> 123
+          </p>
+        </Card>
+
+        <div style={{ marginTop: "10px", textAlign: "center" }}>
+          <p>This is a demo website, please try it.</p>
         </div>
       </Modal>
     </>
