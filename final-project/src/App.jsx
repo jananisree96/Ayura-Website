@@ -19,15 +19,22 @@ function App() {
     <Router>
       <NavBar toggleCart={toggleCart} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/candles" element={<Candles />} />
-        <Route path="/most-popular" element={<MostPopular />} />
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/" element={<Footer />} />
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Home />
+              <Candles />
+              <MostPopular />
+              <Footer />
+            </>
+          } 
+        />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-     
     </Router>
   );
 }
+
 
 export default App;

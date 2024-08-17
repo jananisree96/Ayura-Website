@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css';
 
+
 const NavBar = ({ toggleCart }) => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [email, setEmail] = useState('');
@@ -25,7 +26,7 @@ const NavBar = ({ toggleCart }) => {
     setIsLoginModalOpen(false);
     setEmail('');
     setPassword('');
-    navigate('/dashboard'); 
+    navigate('/dashboard');
   };
 
   const handleLogin = () => {
@@ -55,7 +56,7 @@ const NavBar = ({ toggleCart }) => {
       <nav className="nav-bar">
         <div className="nav-section">
           <Link to="/" className="nav-item">
-            PRODUCTS
+            HOME
           </Link>
           <Link to="/blog" className="nav-item">
             BLOG
@@ -78,7 +79,22 @@ const NavBar = ({ toggleCart }) => {
               disablePortal
               id="combo-box-demo"
               options={trending}
-              sx={{ width: 250 }}
+              sx={{
+                width: 250,
+                '& .MuiInputBase-root': {
+                  color: 'black',
+                  borderColor: 'grey',
+                },
+                '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'green',
+                },
+                '& .MuiInputLabel-root': {
+                  color: 'black',
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'green',
+                }
+              }}
               renderInput={(params) => (
                 <TextField {...params} label="Search..." />
               )}
@@ -96,7 +112,7 @@ const NavBar = ({ toggleCart }) => {
         </div>
       </nav>
 
-      <Modal 
+      <Modal
         title="Log In"
         open={isLoginModalOpen}
         onCancel={closeLoginModal}
@@ -104,17 +120,17 @@ const NavBar = ({ toggleCart }) => {
         centered
       >
         <div className="login-form">
-          <Input 
-            placeholder="Email: ayur@gmail.com" 
+          <Input
+            placeholder="Email: ayur@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginBottom: '10px' }} 
+            style={{ marginBottom: '10px' }}
           />
-          <Input.Password 
-            placeholder="Password: 123" 
+          <Input.Password
+            placeholder="Password: 123"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ marginBottom: '20px' }} 
+            style={{ marginBottom: '20px' }}
           />
           <Button type="primary" block onClick={handleLogin}>
             Login
