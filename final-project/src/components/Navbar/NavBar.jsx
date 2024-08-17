@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Modal, Input, Button, message } from 'antd';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import './NavBar.css'; 
+import './NavBar.css';
 
 const NavBar = ({ toggleCart }) => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+  const navigate = useNavigate();
+
   const handleLoginClick = () => {
     setIsLoginModalOpen(true);
   };
@@ -19,22 +21,23 @@ const NavBar = ({ toggleCart }) => {
   };
 
   const handleLoginSuccess = () => {
-    // Show a success toast
     message.success('Login Successful!');
-
-    // Close the modal
     setIsLoginModalOpen(false);
-
-    // Clear the form data
     setEmail('');
     setPassword('');
+    navigate('/dashboard'); 
   };
 
   const handleLogin = () => {
-    // Here you can add your login logic (e.g., API call)
+    // Static credentials
+    const staticEmail = 'ayur@gmail.com';
+    const staticPassword = '123';
 
-    // Simulating a successful login
-    handleLoginSuccess();
+    if (email === staticEmail && password === staticPassword) {
+      handleLoginSuccess();
+    } else {
+      message.error('Invalid email or password');
+    }
   };
 
   const trending = [
@@ -51,23 +54,23 @@ const NavBar = ({ toggleCart }) => {
       </div>
       <nav className="nav-bar">
         <div className="nav-section">
-          <a href="#" className="nav-item">
+          <Link to="/" className="nav-item">
             PRODUCTS
-          </a>
-          <a href="#" className="nav-item">
+          </Link>
+          <Link to="/blog" className="nav-item">
             BLOG
-          </a>
-          <a href="#" className="nav-item">
+          </Link>
+          <Link to="/sale" className="nav-item">
             SALE
-          </a>
-          <a href="#" className="nav-item">
+          </Link>
+          <Link to="/contact" className="nav-item">
             CONTACT
-          </a>
+          </Link>
         </div>
         <div className="nav-brand">
-          <a href="#" className="logo">
+          <Link to="/" className="logo">
             AYURA
-          </a>
+          </Link>
         </div>
         <div className="nav-section">
           <div>
@@ -92,23 +95,23 @@ const NavBar = ({ toggleCart }) => {
           </a>
         </div>
       </nav>
-      
+
       <Modal 
         title="Log In"
-        visible={isLoginModalOpen}
+        open={isLoginModalOpen}
         onCancel={closeLoginModal}
         footer={null}
         centered
       >
         <div className="login-form">
           <Input 
-            placeholder="Email" 
+            placeholder="Email: ayur@gmail.com" 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={{ marginBottom: '10px' }} 
           />
           <Input.Password 
-            placeholder="Password" 
+            placeholder="Password: 123" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             style={{ marginBottom: '20px' }} 
