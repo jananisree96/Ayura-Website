@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserOutlined, GiftOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import { Modal, Input, Button, message,Card } from 'antd';
+import { Modal, Input, Button, notification,Card } from 'antd';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import './NavBar.css';
@@ -9,8 +9,8 @@ import './NavBar.css';
 
 const NavBar = ({ toggleCart }) => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
@@ -21,25 +21,31 @@ const NavBar = ({ toggleCart }) => {
     setIsLoginModalOpen(false);
   };
 
-  const handleLoginSuccess = () => {
-    message.success('Login Successful!');
+  // Static credentials
+  const staticEmail = "ayur@gmail.com";
+  const staticPassword = "123";
+
+const handleLogin = () => {  
+
+  if (email === staticEmail && password === staticPassword) {
+    notification.success({
+      message: "🎉 Success!",
+      description: "Login Successful! Welcome to your Dashboard.",
+      placement: "topRight",
+    });
     setIsLoginModalOpen(false);
-    setEmail('');
-    setPassword('');
-    navigate('/dashboard');
-  };
+    setEmail("");
+    setPassword("");
+    navigate("/dashboard");
+  } else {
+    notification.error({
+      message: "⚠️ Error",
+      description: "Invalid email or password. Please try again.",
+      placement: "topRight",
+    });
+  }
 
-  const handleLogin = () => {
-    // Static credentials
-    const staticEmail = 'ayur@gmail.com';
-    const staticPassword = '123';
-
-    if (email === staticEmail && password === staticPassword) {
-      handleLoginSuccess();
-    } else {
-      message.error('Invalid email or password');
-    }
-  };
+}
 
   const trending = [
     { label: "Honey Soap" },
@@ -81,19 +87,19 @@ const NavBar = ({ toggleCart }) => {
               options={trending}
               sx={{
                 width: 250,
-                '& .MuiInputBase-root': {
-                  color: 'black',
-                  borderColor: 'grey',
+                "& .MuiInputBase-root": {
+                  color: "black",
+                  borderColor: "grey",
                 },
-                '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'green',
+                "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "green",
                 },
-                '& .MuiInputLabel-root': {
-                  color: 'black',
+                "& .MuiInputLabel-root": {
+                  color: "black",
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'green',
-                }
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "green",
+                },
               }}
               renderInput={(params) => (
                 <TextField {...params} label="Search..." />
@@ -117,28 +123,43 @@ const NavBar = ({ toggleCart }) => {
         </div>
       </nav>
 
-      <Modal 
-        title="Log In"
+      <Modal
+        title="ADMIN LOGIN "
         open={isLoginModalOpen}
         onCancel={closeLoginModal}
         footer={null}
         centered
       >
         <div className="login-form">
-          <Input 
-            placeholder="Email: ayur@gmail.com" 
+          <Input
+            // placeholder="Email: ayur@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginBottom: '10px' }} 
+            style={{ marginBottom: "10px" }}
           />
-          <Input.Password 
-            placeholder="Password: 123" 
+          <Input.Password
+            // placeholder="Password: 123"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ marginBottom: '20px' }} 
+            style={{ marginBottom: "20px" }}
           />
-          <Button type="primary" block onClick={handleLogin}>
-            Login
+          <Button
+            type="primary"
+            block
+            onClick={handleLogin}
+            style={{
+              backgroundColor: "#ffe4e1", 
+              borderColor: "#ffcccb", 
+              color: "#333", 
+
+              fontSize: "16px",
+              cursor: "pointer",
+              textTransform: "uppercase",
+              letterSpacing: "2px",
+              padding: "15px",
+            }}
+          >
+            Admin Login
           </Button>
         </div>
 
