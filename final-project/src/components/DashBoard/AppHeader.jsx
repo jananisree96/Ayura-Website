@@ -8,14 +8,27 @@ const mockComments = [
     "The Honey soap smells amazing and feels great on my skin.",
     "Handmade soap always has a personal touch; it’s wonderful!",
     "Herbal oil is perfect for relaxation and wellness!",
+    "Products are really good",
+    "I absolutely love the products!",
+    "The Aloevera soap is fantastic! Really helps with my skin.",
+    "I love the Herb Candles; they have a calming effect!",
+    "The Honey soap smells amazing and feels great on my skin.",
 ];
 
 const mockOrders = [
     "Honey soap has been ordered!",
     "Aloevera soap has been ordered!",
     "Herb Candles has been ordered!",
+    "Aloevera soap has been ordered!",
+    "Honey soap has been ordered!",
     "Handmade soap has been ordered!",
     "Herbal oil has been ordered!",
+    "Herb Candles has been ordered!",
+    "Aloevera soap has been ordered!",
+    "Honey soap has been ordered!",
+    "Handmade soap has been ordered!",
+    "Herbal oil has been ordered!",
+    "Herb Candles has been ordered!",
 ];
 
 function AppHeader() {

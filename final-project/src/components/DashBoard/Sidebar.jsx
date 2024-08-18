@@ -28,7 +28,7 @@ const Sidebar = () => {
       style={{ color: '#000' }}
       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#b8f5a9')}
       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}>
-        Profile
+        Customers
       </Menu.Item>
       <Menu.Item key="analytics" icon={<BarChartOutlined />}
       style={{ color: '#000' }}
