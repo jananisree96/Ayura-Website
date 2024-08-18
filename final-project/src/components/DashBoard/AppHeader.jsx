@@ -61,7 +61,7 @@ function AppHeader() {
                 </Badge>
             </Space>
             <Drawer
-                title="Comments"
+                title="Reviews"
                 open={commentsOpen}
                 onClose={() => setCommentsOpen(false)}
                 maskClosable
@@ -74,7 +74,7 @@ function AppHeader() {
                 />
             </Drawer>
             <Drawer
-                title="Notifications"
+                title="Orders"
                 open={notificationsOpen}
                 onClose={() => setNotificationsOpen(false)}
                 maskClosable
