@@ -44,7 +44,7 @@ function AppHeader() {
                 style={{ marginRight: '16px' }}
             />
             <Typography.Title level={3} style={{ margin: 0 }}>
-                Ayura's Dashboard
+                Admin Dashboard
             </Typography.Title>
             <Space>
                 <Badge count={mockComments.length} dot>
