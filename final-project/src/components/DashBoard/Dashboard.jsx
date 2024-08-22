@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import AppHeader from "./AppHeader";
 import OverView from "./Overview";
+import CustomerTable from "./CustomerTable";
 import styled from "styled-components";
 
 const Layout = styled.div`
@@ -18,7 +19,7 @@ const MainWrapper = styled.div`
 `;
 
 const SidebarWrapper = styled.div`
-  width: 250px; /* Adjust the width as needed */
+  width: 250px; 
 `;
 
 const ContentWrapper = styled.div`
@@ -28,15 +29,28 @@ const ContentWrapper = styled.div`
 `;
 
 const Dashboard = () => {
+  const [selectedComponent, setSelectedComponent] = useState("overview");
+
+  const renderContent = () => {
+    switch (selectedComponent) {
+      case "overview":
+        return <OverView />;
+      case "customers":
+        return <CustomerTable />;
+      default:
+        return <OverView />;
+    }
+  };
+
   return (
     <Layout>
       <AppHeader />
       <MainWrapper>
         <SidebarWrapper>
-          <Sidebar />
+          <Sidebar onSelect={setSelectedComponent} />
         </SidebarWrapper>
         <ContentWrapper>
-          <OverView />
+          {renderContent()}
         </ContentWrapper>
       </MainWrapper>
     </Layout>
